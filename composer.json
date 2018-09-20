@@ -1,5 +1,5 @@
 {
-  "name": "statamic-frontend-presets/tailwindcss",
+  "name": "statamic/preset-tailwindcss",
   "description": "Statamic frontend preset for Tailwind CSS",
   "keywords": ["statamic", "preset", "tailwindcss"],
   "license": "MIT",
