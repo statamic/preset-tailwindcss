@@ -1,0 +1,21 @@
+{
+  "name": "statamic-frontend-presets/tailwindcss",
+  "description": "Statamic frontend preset for Tailwind CSS",
+  "keywords": ["statamic", "preset", "tailwindcss"],
+  "license": "MIT",
+  "require": {
+    "laravel/framework": "^5.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "StatamicFrontendPresets\\TailwindCssPreset\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "StatamicFrontendPresets\\TailwindCssPreset\\TailwindCssPresetServiceProvider"
+      ]
+    }
+  }
+}
