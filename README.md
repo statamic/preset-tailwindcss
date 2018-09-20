@@ -1,4 +1,4 @@
-# Statamic 3.0.0+ Frontend preset for Tailwind CSS
+# Statamic 3.0.0+ Frontend Preset for Tailwind CSS
 
 A Statamic front-end scaffolding preset for [Tailwind CSS](https://tailwindcss.com) - a Utility-First CSS Framework for Rapid UI Development.
 
