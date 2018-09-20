@@ -8,7 +8,7 @@ A Statamic front-end scaffolding preset for [Tailwind CSS](https://tailwindcss.c
 
 1. Fresh install Statamic >= 3.0.0 and cd to your app.
 2. Install this preset via `composer require statamic/preset-tailwindcss`. Statamic will automatically discover this package. No need to register the service provider.
-3. Use `php artisan preset tailwindcss`
+3. Use `php artisan preset tailwindcss` to install on top of your current dependencies, OR use `php artisan preset tailwindcss-clean` to nuke those deps from orbit and start so fresh and so clean, clean.
 4. `npm install && npm run dev && npm run dev` (this is required twice, due to the way that `laravel-mix-tailwind` installs the Tailwind CSS dependency)
 5. `php artisan serve` (or equivalent) to run server and test preset.
 
