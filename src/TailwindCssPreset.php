@@ -30,15 +30,15 @@ class TailwindCssPreset extends Preset
     {
         if (self::$clean) {
             return [
-                'laravel-mix' => '^2.1',
-                'laravel-mix-purgecss' => '^2.2',
+                'laravel-mix' => '^4.0',
+                'laravel-mix-purgecss' => '^4.0.0',
                 'laravel-mix-tailwind' => '^0.1.0',
             ];
         }
 
         return array_merge([
-            'laravel-mix' => '^2.1',
-            'laravel-mix-purgecss' => '^2.2',
+            'laravel-mix' => '^4.0',
+            'laravel-mix-purgecss' => '^4.0.0',
             'laravel-mix-tailwind' => '^0.1.0',
         ], Arr::except($packages, [
             'axios',
