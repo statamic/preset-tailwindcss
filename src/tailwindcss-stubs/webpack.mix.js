@@ -14,10 +14,9 @@ require('laravel-mix-purgecss');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
+mix.js('resources/js/site.js', 'public/js')
    .postCss('resources/css/site.css', 'public/css')
-   .tailwind()
-   .purgeCss();
+   .tailwind();
 
 if (mix.inProduction()) {
   mix.version();

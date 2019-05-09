@@ -1,22 +1,17 @@
 <!doctype html>
-<html lang="{{ locale }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token }}">
-
-    <title>{{ site_name || "Statamic" }}</title>
-
-    <!-- Styles -->
-    <link href="/css/site.css" rel="stylesheet">
-</head>
-<body class="bg-grey-lightest h-screen antialiased">
-
-    {{ template_content }}
-
-    <!-- Scripts -->
-    <script src="/js/site.js"></script>
-</body>
+<html lang="{{ site_short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token }}">
+        <title>{{ site_name ?? "Statamic 3" }}</title>
+        <link rel="stylesheet" href="/css/site.css">
+    </head>
+    <body class="bg-white font-sans leading-normal">
+        <div class="max-w-lg mx-auto py-8">
+            {{ template_content }}
+        </div>
+        <script src="/js/site.js"></script>
+    </body>
 </html>

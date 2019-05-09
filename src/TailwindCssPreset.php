@@ -33,6 +33,7 @@ class TailwindCssPreset extends Preset
                 'laravel-mix' => '^4.0',
                 'laravel-mix-purgecss' => '^4.0.0',
                 'laravel-mix-tailwind' => '^0.1.0',
+
             ];
         }
 
@@ -40,6 +41,7 @@ class TailwindCssPreset extends Preset
             'laravel-mix' => '^4.0',
             'laravel-mix-purgecss' => '^4.0.0',
             'laravel-mix-tailwind' => '^0.1.0',
+            'vue-template-compiler' => '^2.5.21'
         ], Arr::except($packages, [
             'axios',
             'bootstrap',
@@ -55,8 +57,8 @@ class TailwindCssPreset extends Preset
     {
         tap(new Filesystem, function ($filesystem) {
             $filesystem->deleteDirectory(resource_path('sass'));
-            $filesystem->delete(public_path('js/site.js'));
-            $filesystem->delete(public_path('css/site.css'));
+            $filesystem->delete(public_path('js/app.js'));
+            $filesystem->delete(public_path('css/app.css'));
 
             if (! $filesystem->isDirectory($directory = resource_path('css'))) {
                 $filesystem->makeDirectory($directory, 0755, true);
@@ -77,8 +79,10 @@ class TailwindCssPreset extends Preset
 
     protected static function updateWelcomePage()
     {
-        (new Filesystem)->delete(resource_path('views/welcome.antlers.html'));
-
+        tap(new Filesystem, function ($filesystem) {
+            $filesystem->delete(resource_path('views/layout.antlers.html'));
+            $filesystem->delete(resource_path('views/home.antlers.html'));
+        });
         copy(__DIR__.'/tailwindcss-stubs/resources/views/welcome.antlers.html', resource_path('views/welcome.antlers.html'));
     }
 }
