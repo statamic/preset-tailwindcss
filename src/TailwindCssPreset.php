@@ -83,6 +83,9 @@ class TailwindCssPreset extends Preset
             $filesystem->delete(resource_path('views/layout.antlers.html'));
             $filesystem->delete(resource_path('views/home.antlers.html'));
         });
-        copy(__DIR__.'/tailwindcss-stubs/resources/views/welcome.antlers.html', resource_path('views/welcome.antlers.html'));
+
+        copy(__DIR__.'/tailwindcss-stubs/resources/views/layout.antlers.html', resource_path('views/layout.antlers.html'));
+
+        copy(__DIR__.'/tailwindcss-stubs/resources/views/home.antlers.html', resource_path('views/home.antlers.html'));
     }
 }
