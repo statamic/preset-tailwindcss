@@ -89,7 +89,7 @@ class TailwindCssPreset extends Preset
         });
 
         copy(__DIR__.'/tailwindcss-stubs/resources/views/layout.antlers.html', resource_path('views/layout.antlers.html'));
-
         copy(__DIR__.'/tailwindcss-stubs/resources/views/home.antlers.html', resource_path('views/home.antlers.html'));
+        copy(__DIR__.'/tailwindcss-stubs/resources/views/nav.antlers.html', resource_path('views/nav.antlers.html'));
     }
 }
