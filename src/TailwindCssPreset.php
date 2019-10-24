@@ -69,7 +69,7 @@ class TailwindCssPreset extends Preset
             }
         });
 
-        copy(__DIR__.'/tailwindcss-stubs/resources/css/site.css', resource_path('css/site.css'));
+        copy(__DIR__.'/tailwindcss-stubs/resources/css/tailwind.css', resource_path('css/tailwind.css'));
     }
 
     protected static function updateBootstrapping()
