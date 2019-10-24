@@ -30,10 +30,14 @@ class TailwindCssPreset extends Preset
     {
         if (self::$clean) {
             return [
+                "autoprefixer": "^9.6.1",
+                "cross-env": "^5.1",
+                "postcss-import": "^12.0.1",
+                "postcss-nested": "^4.1.2",
+                "postcss-preset-env": "^6.7.0",
                 'laravel-mix' => '^4.0',
                 'laravel-mix-purgecss' => '^4.0.0',
-                'laravel-mix-tailwind' => '^0.1.0',
-
+                "tailwindcss": "^1.1.2"
             ];
         }
 
@@ -41,7 +45,7 @@ class TailwindCssPreset extends Preset
             'laravel-mix' => '^4.0',
             'laravel-mix-purgecss' => '^4.0.0',
             'laravel-mix-tailwind' => '^0.1.0',
-            'vue-template-compiler' => '^2.5.21'
+            'vue-template-compiler' => '^2.610'
         ], Arr::except($packages, [
             'axios',
             'bootstrap',
@@ -70,7 +74,7 @@ class TailwindCssPreset extends Preset
 
     protected static function updateBootstrapping()
     {
-        copy(__DIR__.'/tailwindcss-stubs/tailwind.js', base_path('tailwind.js'));
+        copy(__DIR__.'/tailwindcss-stubs/tailwind.config.js', base_path('tailwind.config.js'));
 
         copy(__DIR__.'/tailwindcss-stubs/webpack.mix.js', base_path('webpack.mix.js'));
 
