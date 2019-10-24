@@ -30,14 +30,14 @@ class TailwindCssPreset extends Preset
     {
         if (self::$clean) {
             return [
-                "autoprefixer": "^9.6.1",
-                "cross-env": "^5.1",
-                "postcss-import": "^12.0.1",
-                "postcss-nested": "^4.1.2",
-                "postcss-preset-env": "^6.7.0",
+                "autoprefixer" => "^9.6.1",
+                "cross-env" => "^5.1",
+                "postcss-import" => "^12.0.1",
+                "postcss-nested" => "^4.1.2",
+                "postcss-preset-env" => "^6.7.0",
                 'laravel-mix' => '^4.0',
                 'laravel-mix-purgecss' => '^4.0.0',
-                "tailwindcss": "^1.1.2"
+                "tailwindcss" => "^1.1.2"
             ];
         }
 
